@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">JW Timer</string>
+    <string name="greeting_hello">Hello,</string>
+    <string name="greeting_timed">Lets get you timed</string>
+    <string name="menu_text_home">Home</string>
+    <string name="menu_text_timers">Timers</string>
+    <string name="home_text_previous_timers">Previous timers</string>
+
+    <string name="dialog_text_choose_your_timer">What do you want to time?</string>
+    <string name="dialog_text_specific_part">Specific part</string>
+    <string name="dialog_text_whole_meeting">Whole meeting</string>
+    <string name="home_text_button_all_timers">All Timers</string>
 </resources>
