@@ -6,4 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/greeting_hello"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/greeting_timed"
+        android:textSize="20sp"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_public_talk"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:cardBackgroundColor="@color/primaryLightColor"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_watchtower"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:cardBackgroundColor="@color/secondaryLightColor"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/card_treasures"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="@+id/card_public_talk"
+        app:layout_constraintTop_toBottomOf="@+id/card_public_talk" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_treasures"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/secondaryLightColor"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/card_public_talk"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/card_watchtower"
+        app:layout_constraintTop_toTopOf="@+id/card_watchtower" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addTimerFAB"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_add_white_24dp"
+        app:backgroundTint="@color/primaryColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/home_text_previous_timers"
+        android:textSize="20sp"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/card_watchtower"
+        app:layout_constraintTop_toBottomOf="@+id/card_watchtower" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/home_text_button_all_timers"
+        app:layout_constraintBottom_toBottomOf="@+id/addTimerFAB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addTimerFAB" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/addTimerFAB"
+        app:layout_constraintEnd_toEndOf="@+id/card_treasures"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
